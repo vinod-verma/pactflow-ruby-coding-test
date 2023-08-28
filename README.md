@@ -70,7 +70,7 @@ Notes on implementation:
 - Don't build GUIs, we're more interested in your approach to solving the given task, not how shiny it looks.
 - Don't worry about making a command line interface to the application.
 - Don't use any frameworks (rails), or any external gems (unless it's for testing or build/dependency management)
-- Make as many commits as possible, remember, we want to see how you approached the solution, not just the end result.
+- Use as many commits as you need, remember, we want to see how you approached the solution, not just the end result in one commit
 - Happy coding!
 
 Notes on submission:
