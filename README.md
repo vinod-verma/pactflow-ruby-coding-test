@@ -71,12 +71,12 @@ Notes on implementation:
 - Don't worry about making a command line interface to the application.
 - Don't use any frameworks (rails), or any external gems (unless it's for testing or build/dependency management)
 - Make as many commits as possible, remember, we want to see how you approached the solution, not just the end result.
+- Happy coding!
 
 Notes on submission:
 
 - Fork this repository and create a Pull Request to your repository.
 - Write your solution in the solution folder.
-- Send us the link to the PR you created.
 - Don't spend more than 2 hours maximum. 
 - If you run out of time, please add details of what you would have done better given more time on your PR.
-- When you've finished, send through the link to your github-repo. Happy coding!
+- When you've finished, send through the link to your github-repo. 
