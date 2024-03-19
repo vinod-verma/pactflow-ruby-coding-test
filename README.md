@@ -1,3 +1,40 @@
+# PactFlow Ruby Coding Test
+## Overview
+
+Welcome to this Ruby coding test. This test is designed to assess your ability to write clean, well-structured, and maintainable code. You will be tasked to create a solution for a specific requirement outline below.
+
+We will be looking for the following aspects:
+
+1.  The readability and clarity of your code; including aspects such as:
+    -   Naming conventions
+    -   Code structure
+    -   Comments
+    -   Documentation
+2.  The correctness of your code; including aspects such as:
+    -   Handling of edge cases
+    -   Error handling
+    -   Testing
+3.  The maintainability of your code; including aspects such as:
+    -   Modularity
+    -   Extensibility
+    -   Reusability
+4.  Your familiarity with standard development tools and practices; including
+    aspects such as:
+    -   Version control
+    -   Creating and using virtual environments
+    -   Documenting PRs and commits
+
+## Submission
+
+- Please fork this repository and submit your solution as a Pull Request.
+- Write your solution in the solution folder, we expect to see several commits, as you implement the solution.
+- Your solution should have proof that it passes the requirements by using rspec.
+- Don't spend more than 2 hours maximum.
+- If you run out of time, please add details of what you would have done better given more time on your Pull Request.
+- When you've finished, send through the link to your Pull Request.
+
+## The Requirement
+
 World Tennis Association (WTA) is hosting a tennis tournament. To aid with this, we're developing a scoring system.
 
 The scoring system for tennis works like this.
@@ -24,15 +61,14 @@ The scoring system for tennis works like this.
 
 * Add a pointWonBy method that indicates who won the point
 
-Constraints
+### Constraints
 
 * Only worry about 1 set
 * Don't worry about validation, assume the client passes in correct data
 
 More information on tennis scoring can be found here https://en.wikipedia.org/wiki/Tennis_scoring_system
 
-For example:
-
+### Example Interface
 
 The interface should look something like this in Java:
 
@@ -64,7 +100,7 @@ The interface should look something like this in Java:
  
 ```
 
-Notes on implementation:
+### Implementation Notes
 
 - Use Ruby 3.x.x
 - Don't build GUIs, we're more interested in your approach to solving the given task, not how shiny it looks.
@@ -72,11 +108,3 @@ Notes on implementation:
 - Don't use any frameworks (rails), or any external gems (unless it's for testing or build/dependency management)
 - Use as many commits as you need, remember, we want to see how you approached the solution, not just the end result in one commit
 - Happy coding!
-
-Notes on submission:
-
-- Fork this repository and create a Pull Request to your repository.
-- Write your solution in the solution folder.
-- Don't spend more than 2 hours maximum. 
-- If you run out of time, please add details of what you would have done better given more time on your PR.
-- When you've finished, send through the link to your github-repo. 
