@@ -10,6 +10,14 @@ class TennisTournament
     update_game(player)
   end
 
+  def score
+    if @tiebreak
+      "#{@player1_games}-#{@player2_games}, #{@tiebreak_points[0]}-#{@tiebreak_points[1]}"
+    else
+      "#{@player1_games}-#{@player2_games}, #{game_score(@player1_points)}-#{game_score(@player2_points)}"
+    end
+  end
+
   private
 
   def update_game(player)
@@ -18,6 +26,22 @@ class TennisTournament
     else
       @player2_points += 1
     end
+
+    if @player1_points >= 4 && @player1_points >= @player2_points + 2
+      @player1_games += 1
+      reset_points
+    elsif @player2_points >= 4 && @player2_points >= @player1_points + 2
+      @player2_games += 1
+      reset_points
+    elsif @player1_points >= 3 && @player2_points >= 3 && @player1_points == @player2_points
+      @player1_points = 3
+      @player2_points = 3
+    end
+  end
+
+  def reset_points
+    @player1_points = 0
+    @player2_points = 0
   end
 
   def game_score(points)
