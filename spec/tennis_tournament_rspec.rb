@@ -17,4 +17,26 @@ RSpec.describe TennisTournament do
       end
     end
   end
+
+  describe "#score" do
+    context "when no points are won" do
+      it "returns '0-0, 0-0'" do
+        expect(match.score).to eq("0-0, 0-0")
+      end
+    end
+
+    context "when player1 wins one point" do
+      it "returns '0-0, 15-0'" do
+        match.point_won_by("player1")
+        expect(match.score).to eq("0-0, 15-0")
+      end
+    end
+
+    context "when player1 wins one game" do
+      it "returns '1-0, 0-0'" do
+        4.times {match.point_won_by("player1")}
+        expect(match.score).to eq("1-0, 0-0")
+      end
+    end
+  end
 end
