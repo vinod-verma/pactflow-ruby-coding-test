@@ -39,4 +39,36 @@ RSpec.describe TennisTournament do
       end
     end
   end
+
+  describe "#deuce" do
+    before(:all) do
+      @match = TennisTournament.new
+    end
+
+    context "when 3 points have been scored by each player" do
+      it "returns '0-0, 40-40'" do
+        @match.point_won_by("player1")
+        @match.point_won_by("player2")
+        @match.point_won_by("player1")
+        @match.point_won_by("player2")
+        @match.point_won_by("player1")
+        @match.point_won_by("player2")
+        expect(@match.score).to eq("0-0, 40-40")
+      end
+    end
+
+    context "when player1 wins have advantage" do
+      it "returns '0-0, AD-40'" do
+        @match.point_won_by("player1")
+        expect(@match.score).to eq("0-0, AD-40")
+      end
+    end
+
+    context "when player1 wins one game" do
+      it "returns '1-0, 0-0'" do
+        @match.point_won_by("player1")
+        expect(@match.score).to eq("1-0, 0-0")
+      end
+    end
+  end
 end
